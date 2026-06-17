@@ -61,12 +61,22 @@ class ListaEncadeada:
     def imprimirListaEspera(self):
         atual = self.head
         while atual is not None:
-            print(f"|{atual.cor} {atual.numero}| => ", end="")
+            print(f"|{atual.cor} {atual.numero}| ", end="")
             atual = atual.proximo
+
+    def atenderPaciente(self):
+        atual = self.head
+        anterior = None
+
+        self.head = atual.proximo
+        return True
 
 
 lista = ListaEncadeada()
 for i in range(5):
     lista.inserir()
 
+lista.imprimirListaEspera()
+lista.atenderPaciente()
+print("")
 lista.imprimirListaEspera()
