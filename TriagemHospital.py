@@ -73,10 +73,24 @@ class ListaEncadeada:
 
 
 lista = ListaEncadeada()
-for i in range(5):
-    lista.inserir()
 
-lista.imprimirListaEspera()
-lista.atenderPaciente()
-print("")
-lista.imprimirListaEspera()
+while True:
+    print("-"*10)
+    print("Menu")
+    print("-"*10)
+    print(" 1 - Adicionar paciente a fila\n 2 - Mostrar pacientes na fila\n 3 - Chamar paciente\n 4 - Sair")
+    escolha = input()
+
+    if escolha == "1":
+        lista.inserir()
+
+    elif escolha == "2":
+        lista.imprimirListaEspera()
+
+    elif escolha == "3":
+        lista.atenderPaciente()
+
+    else:
+        break
+
+        
